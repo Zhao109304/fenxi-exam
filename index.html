@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>药物分析考试平台</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                        <polyline points="22 4 12 14.01 9 11.01"/>
+                    </svg>
+                    <span class="logo-text">药物分析考试平台</span>
+                </div>
+                <span class="subtitle">知识记忆与错题强化</span>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div id="home-page" class="page active">
+                <div class="hero-section">
+                    <div class="hero-card">
+                        <div class="hero-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                            </svg>
+                        </div>
+                        <h1 class="hero-title">开始考试</h1>
+                        <p class="hero-desc">测试您的药物分析知识，强化记忆</p>
+                        <p class="hero-count">共 <span id="total-questions">0</span> 道题目</p>
+                        <button id="start-exam-btn" class="btn btn-primary btn-lg">
+                            开始答题
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon wrong-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <line x1="15" y1="9" x2="9" y2="15"/>
+                                    <line x1="9" y1="9" x2="15" y2="15"/>
+                                </svg>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-value" id="wrong-count">0</span>
+                                <span class="stat-label">待复习错题</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon history-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-value" id="exam-count">0</span>
+                                <span class="stat-label">已完成考试</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="action-section">
+                    <button id="review-btn" class="action-card review-card">
+                        <div class="action-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                                <path d="M8 13h2"/>
+                                <path d="M14 13h2"/>
+                                <path d="M8 17h2"/>
+                                <path d="M14 17h2"/>
+                                <path d="M8 9h8"/>
+                            </svg>
+                        </div>
+                        <div class="action-info">
+                            <span class="action-title">错题重做</span>
+                            <span class="action-desc">针对错题进行强化练习</span>
+                        </div>
+                        <svg class="action-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"/>
+                        </svg>
+                    </button>
+
+                    <button id="clear-btn" class="action-card clear-card">
+                        <div class="action-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="3 6 5 6 21 6"/>
+                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                            </svg>
+                        </div>
+                        <div class="action-info">
+                            <span class="action-title">清除记录</span>
+                            <span class="action-desc">清除所有考试和错题记录</span>
+                        </div>
+                        <svg class="action-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div id="exam-page" class="page">
+                <div class="exam-header">
+                    <div class="exam-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-fill"></div>
+                        </div>
+                        <div class="progress-info">
+                            <span class="progress-text">第 <span id="current-num">1</span> / <span id="total-num">0</span> 题</span>
+                            <span class="exam-mode" id="exam-mode">正式考试</span>
+                        </div>
+                    </div>
+                    <button id="exit-exam-btn" class="btn btn-ghost">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"/>
+                            <line x1="6" y1="6" x2="18" y2="18"/>
+                        </svg>
+                        退出
+                    </button>
+                </div>
+
+                <div class="question-card">
+                    <div class="question-type" id="question-type">填空题</div>
+                    <h2 class="question-text" id="question-text">题目内容</h2>
+                    
+                    <div class="options-container" id="options-container">
+                    </div>
+
+                    <div class="feedback-section" id="feedback-section" style="display: none;">
+                        <div class="feedback-content" id="feedback-content">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exam-footer">
+                    <button id="next-btn" class="btn btn-primary btn-lg" disabled>
+                        下一题
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div id="result-page" class="page">
+                <div class="result-header">
+                    <h2 class="result-title">考试完成！</h2>
+                    <p class="result-subtitle" id="result-subtitle">您的考试成绩如下</p>
+                </div>
+
+                <div class="score-section">
+                    <div class="score-circle">
+                        <svg class="score-svg" viewBox="0 0 120 120">
+                            <circle class="score-bg" cx="60" cy="60" r="54"/>
+                            <circle class="score-progress" cx="60" cy="60" r="54" id="score-progress"/>
+                        </svg>
+                        <div class="score-info">
+                            <span class="score-value" id="score-value">0</span>
+                            <span class="score-unit">分</span>
+                        </div>
+                    </div>
+                    <div class="score-details">
+                        <div class="score-detail">
+                            <span class="detail-label">正确率</span>
+                            <span class="detail-value" id="accuracy-rate">0%</span>
+                        </div>
+                        <div class="score-detail">
+                            <span class="detail-label">答对</span>
+                            <span class="detail-value correct" id="correct-count">0</span>
+                        </div>
+                        <div class="score-detail">
+                            <span class="detail-label">答错</span>
+                            <span class="detail-value wrong" id="wrong-count-result">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrong-list-section" id="wrong-list-section" style="display: none;">
+                    <div class="section-header">
+                        <h3 class="section-title">本次错题</h3>
+                        <span class="section-count" id="wrong-count-detail">0 题</span>
+                    </div>
+                    <div class="wrong-list" id="wrong-list">
+                    </div>
+                </div>
+
+                <div class="result-actions">
+                    <button id="back-home-btn" class="btn btn-ghost btn-lg">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                        返回首页
+                    </button>
+                    <button id="review-wrong-btn" class="btn btn-primary btn-lg" style="display: none;">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                        做错题
+                    </button>
+                </div>
+            </div>
+
+            <div id="review-page" class="page">
+                <div class="exam-header">
+                    <div class="exam-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="review-progress-fill"></div>
+                        </div>
+                        <div class="progress-info">
+                            <span class="progress-text">第 <span id="review-current-num">1</span> / <span id="review-total-num">0</span> 题</span>
+                            <span class="exam-mode review-mode">错题重做</span>
+                        </div>
+                    </div>
+                    <button id="exit-review-btn" class="btn btn-ghost">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"/>
+                            <line x1="6" y1="6" x2="18" y2="18"/>
+                        </svg>
+                        退出
+                    </button>
+                </div>
+
+                <div class="question-card">
+                    <div class="question-type review-type">错题复习</div>
+                    <h2 class="question-text" id="review-question-text">题目内容</h2>
+                    
+                    <div class="options-container" id="review-options-container">
+                    </div>
+
+                    <div class="feedback-section" id="review-feedback-section" style="display: none;">
+                        <div class="feedback-content" id="review-feedback-content">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exam-footer">
+                    <button id="review-next-btn" class="btn btn-primary btn-lg" disabled>
+                        下一题
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="confirm-modal" class="modal" style="display: none;">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="12" y1="8" x2="12" y2="12"/>
+                    <line x1="12" y1="16" x2="12.01" y2="16"/>
+                </svg>
+            </div>
+            <h3 class="modal-title" id="modal-title">确认退出</h3>
+            <p class="modal-desc" id="modal-desc">当前考试进度将不会保存，确定要退出吗？</p>
+            <div class="modal-actions">
+                <button id="modal-cancel" class="btn btn-ghost">取消</button>
+                <button id="modal-confirm" class="btn btn-danger">确定</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
