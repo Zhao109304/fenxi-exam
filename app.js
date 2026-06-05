@@ -2,8 +2,8 @@ window.examApp = (function() {
     const isLocal = window.location.hostname === 'localhost' 
         || window.location.hostname === '127.0.0.1'
         || window.location.protocol === 'file:';
-    // 本地开发使用 localhost:3001，Vercel 部署时使用相对路径 /api
-    const API_BASE_URL = isLocal ? 'http://localhost:3001/api' : '/api';
+    // 本地开发使用 localhost:3001，Railway 部署时使用 Railway 后端地址
+    const API_BASE_URL = isLocal ? 'http://localhost:3001/api' : 'https://fenxi-exam-production.up.railway.app/api';
     
     const questionData = {
         yaowu: window.questions || [],
