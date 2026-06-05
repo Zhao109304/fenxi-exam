@@ -1,9 +1,12 @@
 {
   "version": 2,
   "builds": [
-    { "src": "api/**/*.js", "use": "@vercel/node" }
+    { "src": "api/vercel-api.js", "use": "@vercel/node" }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "/api/index.js" }
-  ]
+    { "src": "/api/(.*)", "dest": "/api/vercel-api.js" }
+  ],
+  "env": {
+    "JWT_SECRET": "@jwt-secret"
+  }
 }

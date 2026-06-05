@@ -7,7 +7,7 @@ const bcrypt = require('bcryptjs');
 const storage = require('./storage');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 const JWT_SECRET = process.env.JWT_SECRET || 'exam-platform-secret-key-2024';
 
 app.use(cors());
