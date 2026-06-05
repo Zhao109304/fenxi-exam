@@ -4,7 +4,8 @@
   "description": "医学考试学习平台",
   "scripts": {
     "dev": "cd server && node server.js",
-    "build": "echo 'Build complete'"
+    "build": "echo 'Build complete'",
+    "start": "cd server && node server.js"
   },
   "keywords": ["exam", "medical", "education"],
   "author": "",
