@@ -586,201 +586,6 @@ const questions = [
   },
   {
     "id": 46,
-    "type": "fill",
-    "question": "药物的熔点收载于质量标准的______。",
-    "options": [
-      "A. 含量测定",
-      "B. 性状 项下",
-      "C. 鉴别",
-      "D. 检查"
-    ],
-    "answer": "B",
-    "originalAnswer": "性状 项下"
-  },
-  {
-    "id": 47,
-    "type": "fill",
-    "question": "人用药品注册技术要求国际协调会的英文缩写是______。",
-    "options": [
-      "A. WHO",
-      "B. GMP",
-      "C. ICH",
-      "D. FDA"
-    ],
-    "answer": "C",
-    "originalAnswer": "ICH"
-  },
-  {
-    "id": 48,
-    "type": "fill",
-    "question": "色谱法对被测组分产生保留的相称为______。",
-    "options": [
-      "A. 流动相",
-      "B. 分配相",
-      "C. 吸附相",
-      "D. 固定相"
-    ],
-    "answer": "D",
-    "originalAnswer": "固定相"
-  },
-  {
-    "id": 49,
-    "type": "fill",
-    "question": "红外谱图按其特征可分为特征区和______。",
-    "options": [
-      "A. 特征区",
-      "B. 指纹区",
-      "C. 指纹谱区",
-      "D. 官能团区"
-    ],
-    "answer": "B",
-    "originalAnswer": "指纹区"
-  },
-  {
-    "id": 50,
-    "type": "fill",
-    "question": "测定吸收系数选用______。",
-    "options": [
-      "A. 含量测定",
-      "B. 检查",
-      "C. 鉴别",
-      "D. 5 台不同的紫外可见分光光度计"
-    ],
-    "answer": "D",
-    "originalAnswer": "5 台不同的紫外可见分光光度计"
-  },
-  {
-    "id": 51,
-    "type": "fill",
-    "question": "按照操作形式，色谱法可分为平面色谱法、柱色谱法及______。",
-    "options": [
-      "A. 电泳",
-      "B. 薄层色谱",
-      "C. 柱色谱",
-      "D. 纸色谱"
-    ],
-    "answer": "A",
-    "originalAnswer": "电泳"
-  },
-  {
-    "id": 52,
-    "type": "fill",
-    "question": "气相色谱法进样方式一般可分为溶液直接进样和______。",
-    "options": [
-      "A. 不分流进样",
-      "B. 顶空进样",
-      "C. 分流进样",
-      "D. 直接进样"
-    ],
-    "answer": "B",
-    "originalAnswer": "顶空进样"
-  },
-  {
-    "id": 53,
-    "type": "fill",
-    "question": "古蔡氏检砷法测砷时，砷化氢气体遇______。",
-    "options": [
-      "A. 含量测定",
-      "B. 检查",
-      "C. 鉴别",
-      "D. 溴化汞 试纸产生黄色至棕色的砷斑"
-    ],
-    "answer": "D",
-    "originalAnswer": "溴化汞 试纸产生黄色至棕色的砷斑"
-  },
-  {
-    "id": 54,
-    "type": "fill",
-    "question": "通常情况下，不挥发性无机杂质采用______。",
-    "options": [
-      "A. 炽灼残渣 法进行检测",
-      "B. 检查",
-      "C. 含量测定",
-      "D. 鉴别"
-    ],
-    "answer": "A",
-    "originalAnswer": "炽灼残渣 法进行检测"
-  },
-  {
-    "id": 55,
-    "type": "fill",
-    "question": "影响因素试验一般包括高温、______。",
-    "options": [
-      "A. 检查",
-      "B. 含量测定",
-      "C. 高湿和光照试验",
-      "D. 鉴别"
-    ],
-    "answer": "C",
-    "originalAnswer": "高湿和光照试验"
-  },
-  {
-    "id": 56,
-    "type": "fill",
-    "question": "用规定的方法测定药物中有效成分的含量是______。",
-    "options": [
-      "A. 检查",
-      "B. 含量测定",
-      "C. 鉴别",
-      "D. 性状"
-    ],
-    "answer": "B",
-    "originalAnswer": "含量测定"
-  },
-  {
-    "id": 57,
-    "type": "fill",
-    "question": "极易溶解是指溶质1g(mg）能在溶剂不到______。",
-    "options": [
-      "A. 检查",
-      "B. 鉴别",
-      "C. 1ml 溶解",
-      "D. 含量测定"
-    ],
-    "answer": "C",
-    "originalAnswer": "1ml 溶解"
-  },
-  {
-    "id": 58,
-    "type": "fill",
-    "question": "红外光谱是由分子的______。",
-    "options": [
-      "A. 含量测定",
-      "B. 检查",
-      "C. 振动 和转动能级引起的光谱",
-      "D. 鉴别"
-    ],
-    "answer": "C",
-    "originalAnswer": "振动 和转动能级引起的光谱"
-  },
-  {
-    "id": 59,
-    "type": "fill",
-    "question": "《中国药典》的正文收载的是______。",
-    "options": [
-      "A. 通则",
-      "B. 药品的质量标准",
-      "C. 索引",
-      "D. 附录"
-    ],
-    "answer": "B",
-    "originalAnswer": "药品的质量标准"
-  },
-  {
-    "id": 60,
-    "type": "fill",
-    "question": "药品检验工作的基本程序一般为______。",
-    "options": [
-      "A. 取样、检验、留样、检验报告",
-      "B. 鉴别",
-      "C. 检查",
-      "D. 含量测定"
-    ],
-    "answer": "A",
-    "originalAnswer": "取样、检验、留样、检验报告"
-  },
-  {
-    "id": 61,
     "type": "truefalse",
     "question": "目前各国药典均采用气相色谱法检查药物中的残留溶剂。？",
     "options": [
@@ -791,7 +596,7 @@ const questions = [
     "originalAnswer": "正确"
   },
   {
-    "id": 62,
+    "id": 47,
     "type": "truefalse",
     "question": "红外谱图按其特征可分为特征区和指纹区。？",
     "options": [
@@ -802,7 +607,7 @@ const questions = [
     "originalAnswer": "正确"
   },
   {
-    "id": 63,
+    "id": 48,
     "type": "truefalse",
     "question": "《中国药典》中，收载六味地黄丸含量测定的部分是二部正文。？",
     "options": [
@@ -813,7 +618,7 @@ const questions = [
     "originalAnswer": "错误"
   },
   {
-    "id": 64,
+    "id": 49,
     "type": "truefalse",
     "question": "水杨酸既是阿司匹林生产工艺中可能引入的杂质，也是其储藏过程中可能产生的杂质。？",
     "options": [
@@ -824,7 +629,7 @@ const questions = [
     "originalAnswer": "正确"
   },
   {
-    "id": 65,
+    "id": 50,
     "type": "truefalse",
     "question": "为药品研发、审批和上市制定统一的国际性技术指导原则的是GLP。？",
     "options": [
@@ -835,7 +640,7 @@ const questions = [
     "originalAnswer": "错误"
   },
   {
-    "id": 66,
+    "id": 51,
     "type": "truefalse",
     "question": "用古蔡法检查砷盐时，导气管塞入醋酸铅棉花的目的是除去可能产生的H2S气体。？",
     "options": [
@@ -846,7 +651,7 @@ const questions = [
     "originalAnswer": "正确"
   },
   {
-    "id": 67,
+    "id": 52,
     "type": "truefalse",
     "question": "盐酸溶液（9→100），表示 9 ml 浓盐酸加水溶液稀释到 100 ml。？",
     "options": [
@@ -857,7 +662,7 @@ const questions = [
     "originalAnswer": "正确"
   },
   {
-    "id": 68,
+    "id": 53,
     "type": "truefalse",
     "question": "药品检验工作的一般程序为取样→鉴别→检查→含量测定→写出检验报告。？",
     "options": [
@@ -868,7 +673,7 @@ const questions = [
     "originalAnswer": "正确"
   },
   {
-    "id": 69,
+    "id": 54,
     "type": "truefalse",
     "question": "取用量为“约”若干时，系指取用量不得超过规定量的±5%。？",
     "options": [
@@ -879,7 +684,7 @@ const questions = [
     "originalAnswer": "错误"
   },
   {
-    "id": 70,
+    "id": 55,
     "type": "truefalse",
     "question": "水浴温度：除另有规定外，均为70 ~ 80°C。？",
     "options": [
@@ -890,7 +695,7 @@ const questions = [
     "originalAnswer": "错误"
   },
   {
-    "id": 71,
+    "id": 56,
     "type": "truefalse",
     "question": "杂质限量是指杂质的最大允许量。？",
     "options": [
@@ -901,7 +706,7 @@ const questions = [
     "originalAnswer": "正确"
   },
   {
-    "id": 72,
+    "id": 57,
     "type": "truefalse",
     "question": "原料药的含量通常用标示量的百分含量（即百分标示量）表示。？",
     "options": [
@@ -912,7 +717,7 @@ const questions = [
     "originalAnswer": "错误"
   },
   {
-    "id": 73,
+    "id": 58,
     "type": "truefalse",
     "question": "药物中氯化物杂质检查的一般意义在于它可以考核生产工艺和企业管理是否正常。？",
     "options": [
@@ -923,7 +728,7 @@ const questions = [
     "originalAnswer": "正确"
   },
   {
-    "id": 74,
+    "id": 59,
     "type": "truefalse",
     "question": "溶液的百分比浓度，除另有规定外，系指溶液100 ml中含有溶质若干克。？",
     "options": [
@@ -934,7 +739,7 @@ const questions = [
     "originalAnswer": "正确"
   },
   {
-    "id": 75,
+    "id": 60,
     "type": "truefalse",
     "question": "杂质无治疗作用、或影响药物的稳定性和疗效、甚至对人体健康有害。？",
     "options": [
@@ -946,6 +751,4 @@ const questions = [
   }
 ];
 
-if (typeof module !== "undefined" && module.exports) {
-  module.exports = questions;
-}
+window.questions = questions;
