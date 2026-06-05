@@ -143,10 +143,7 @@ async function saveSubjectData(username, subject, wrongQuestions, examHistory) {
     }
 }
 
-app.use(cors({
-    origin: ['https://zhao109304.github.io', 'http://localhost:8080', 'http://127.0.0.1:8080'],
-    credentials: true
-}));
+app.use(cors());
 app.use(express.json());
 
 let dbInitialized = false;
